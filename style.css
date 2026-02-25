@@ -3,18 +3,34 @@ body { background-color: #f8fafc; font-family: 'Inter', 'Noto Sans KR', sans-ser
 .input-plain { border-bottom: 1px solid transparent; background: transparent; width: 100%; outline: none; transition: all 0.2s; }
 .input-plain:focus { border-bottom: 1px solid #3b82f6; background: #f1f5f9; }
 .handle { cursor: grab; color: #cbd5e1; padding-right: 8px; }
+.month-btn {
+    white-space: nowrap;
+}
 .month-btn.active { background-color: #2563eb !important; color: white !important; box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3); border-color: #2563eb !important; }
 .year-select { background: #1e293b; color: white; padding: 5px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
 @media (max-width: 640px) {
-    body {
-        padding: 1rem;
-    }
     .year-select {
         text-align: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
     }
     #month_selector {
-        justify-content: center;
         width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+    .month-btn {
+        flex: 0 0 auto;
     }
 }
