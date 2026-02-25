@@ -1,4 +1,11 @@
-body { background-color: #f8fafc; font-family: 'Inter', 'Noto Sans KR', sans-serif; letter-spacing: -0.02em; }
+body { 
+    background-color: #f8fafc; 
+    font-family: 'Inter', 'Noto Sans KR', sans-serif; 
+    letter-spacing: -0.02em; 
+    overflow-x: hidden;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
 .card { background: white; border-radius: 16px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
 .input-plain { border-bottom: 1px solid transparent; background: transparent; width: 100%; outline: none; transition: all 0.2s; }
 .input-plain:focus { border-bottom: 1px solid #3b82f6; background: #f1f5f9; }
@@ -19,18 +26,60 @@ th, td {
     text-align: left;
 }
 
+/* Mobile responsive adjustments */
 @media (max-width: 640px) {
+    body {
+        font-size: 14px;
+    }
+    .card {
+        padding: 1rem !important;
+        border-radius: 12px;
+    }
     .year-select {
         text-align: center;
-        width: 100%;
-        margin-bottom: 0.5rem;
+        width: auto;
+        margin-bottom: 0;
     }
     #month_selector {
         width: 100%;
         overflow-x: auto;
         justify-content: flex-start;
+        display: flex;
+        flex-wrap: nowrap !important;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
     }
     .month-btn {
         flex: 0 0 auto;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    /* Prevent table overflow in category cards */
+    .category-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -0.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    table {
+        min-width: 450px;
+    }
+
+    input.text-xl {
+        font-size: 1.125rem;
+        width: 100% !important;
+    }
+    
+    .text-4xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .text-5xl { font-size: 2.25rem; line-height: 2.5rem; }
+}
+
+@media (max-width: 400px) {
+    table {
+        min-width: 400px;
+    }
+    th, td {
+        padding: 0.5rem 0.25rem;
     }
 }
