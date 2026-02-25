@@ -117,11 +117,11 @@ function renderData() {
                     <tbody id="items_${cIdx}" class="sortable-list">
                         ${cat.items.map((item, iIdx) => `
                             <tr class="item-row border-b border-slate-50 last:border-0 hover:bg-slate-50/50 transition" data-id="${iIdx}">
-                                <td class="handle w-8 text-slate-300">⠿</td>
-                                <td class="w-1/3 min-w-[80px]"><input type="text" class="input-plain font-bold text-slate-700" value="${item.name}" onchange="updateItemName(${cIdx}, ${iIdx}, this.value)"></td>
-                                <td class="min-w-[60px]"><input type="text" class="input-plain text-slate-400 text-xs" value="${item.detail}" onchange="updateItemDetail(${cIdx}, ${iIdx}, this.value)"></td>
-                                <td class="w-1/3 min-w-[80px]"><input type="text" class="input-plain text-right font-black text-slate-900" value="${item.val}" onkeyup="formatVal(this); updateItemValRealtime(${cIdx}, ${iIdx}, this.value)"></td>
-                                <td class="w-8 text-right"><button onclick="removeItem(${cIdx}, ${iIdx})" class="text-slate-200 hover:text-red-500">×</button></td>
+                                <td class="handle text-slate-300">⠿</td>
+                                <td><input type="text" class="input-plain font-bold text-slate-700" value="${item.name}" onchange="updateItemName(${cIdx}, ${iIdx}, this.value)"></td>
+                                <td><input type="text" class="input-plain text-slate-400 text-xs" value="${item.detail}" onchange="updateItemDetail(${cIdx}, ${iIdx}, this.value)"></td>
+                                <td><input type="text" class="input-plain text-right font-black text-slate-900" value="${item.val}" onkeyup="formatVal(this); updateItemValRealtime(${cIdx}, ${iIdx}, this.value)"></td>
+                                <td class="text-right"><button onclick="removeItem(${cIdx}, ${iIdx})" class="text-slate-200 hover:text-red-500">×</button></td>
                             </tr>
                         `).join('')}
                     </tbody>
