@@ -162,12 +162,12 @@ function renderInvestTable() {
         body.innerHTML += `
             <tr class="item-row border-b border-slate-50 last:border-0 hover:bg-slate-50/50 transition">
                 <td class="w-8 text-slate-200 text-[10px] text-center"><button onclick="removeInvestRow(${idx})" class="hover:text-red-500">×</button></td>
-                <td class="w-1/4 px-4"><input type="text" class="input-plain font-bold text-slate-700" value="${item.name || ''}" onchange="updateInvestField(${idx}, 'name', this.value)"></td>
-                <td class="px-4"><input type="text" class="input-plain text-slate-500 text-sm" value="${item.type || ''}" onchange="updateInvestField(${idx}, 'type', this.value)"></td>
-                <td class="px-4"><input type="text" class="input-plain text-right font-black text-slate-900" value="${buyNum.toLocaleString()}" onkeyup="updateInvestNumericField(${idx}, 'buy', this)"></td>
-                <td class="px-4"><input type="text" class="input-plain text-right font-black text-blue-600" value="${totalBuyNum.toLocaleString()}" onkeyup="updateInvestNumericField(${idx}, 'total_buy', this)"></td>
-                <td class="px-4"><input type="text" class="input-plain text-right font-black text-slate-900" value="${valNum.toLocaleString()}" onkeyup="updateInvestNumericField(${idx}, 'val', this)"></td>
-                <td class="text-right font-black ${colorClass} w-20 px-4" id="invest_pct_${idx}">${pct}%</td>
+                <td class="w-1/4 px-2"><input type="text" class="input-plain font-bold text-slate-700" value="${item.name || ''}" onchange="updateInvestField(${idx}, 'name', this.value)"></td>
+                <td class="px-2"><input type="text" class="input-plain text-slate-500 text-sm" value="${item.type || ''}" onchange="updateInvestField(${idx}, 'type', this.value)"></td>
+                <td class="px-2"><input type="text" class="input-plain text-right font-black text-slate-900" value="${buyNum.toLocaleString()}" onkeyup="updateInvestNumericField(${idx}, 'buy', this)"></td>
+                <td class="px-2"><input type="text" class="input-plain text-right font-black text-blue-600" value="${totalBuyNum.toLocaleString()}" onkeyup="updateInvestNumericField(${idx}, 'total_buy', this)"></td>
+                <td class="px-2"><input type="text" class="input-plain text-right font-black text-slate-900" value="${valNum.toLocaleString()}" onkeyup="updateInvestNumericField(${idx}, 'val', this)"></td>
+                <td class="text-right font-black ${colorClass} w-20 px-2" id="invest_pct_${idx}">${pct}%</td>
             </tr>
         `;
     });
