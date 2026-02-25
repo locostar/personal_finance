@@ -1,1 +1,20 @@
-/* Add styles here */
+body { background-color: #f8fafc; font-family: 'Inter', 'Noto Sans KR', sans-serif; letter-spacing: -0.02em; }
+.card { background: white; border-radius: 16px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+.input-plain { border-bottom: 1px solid transparent; background: transparent; width: 100%; outline: none; transition: all 0.2s; }
+.input-plain:focus { border-bottom: 1px solid #3b82f6; background: #f1f5f9; }
+.handle { cursor: grab; color: #cbd5e1; padding-right: 8px; }
+.month-btn.active { background-color: #2563eb !important; color: white !important; box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3); border-color: #2563eb !important; }
+.year-select { background: #1e293b; color: white; padding: 5px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    .year-select {
+        text-align: center;
+    }
+    #month_selector {
+        justify-content: center;
+        width: 100%;
+    }
+}
